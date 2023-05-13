@@ -7,7 +7,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true}));
 //To render static file 
-app.use(express.static("public"));
+// app.use(express.static("public"));
+
+app.use(express.static(__dirname + "/public/"));
 
 
 app.get("/" , (req , res)=> {
